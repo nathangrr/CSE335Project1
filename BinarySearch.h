@@ -1,20 +1,35 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   BinarySearch.h
- * Author: mbmap
- *
- * Created on February 19, 2018, 11:25 PM
- */
-
 #ifndef BINARYSEARCH_H
 #define BINARYSEARCH_H
 
+#include <cstdlib>
+#include<iostream>
+using namespace std;
+#include "PetDatabaseSearchable.h"
+
+class BinarySearch{
+public:
+    int search(PetDatabaseSearchable* pds){
+        int left = 0;
+        int right = (*pds).getSize() - 1;
+        while (left <= right){
+            int middle = (left+right)/2;
+            if ((*pds).compareAt(middle) == 1){
+                return middle;
+            }
+            else if ((*pds).compareAt(middle) == 2){
+                right = middle - 1;
+            }
+            else{
+                left = middle + 1;
+            }
+            
+        }
+        return -1;
+    }
+    
+};
 
 
 #endif /* BINARYSEARCH_H */
+
 

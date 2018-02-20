@@ -1,20 +1,34 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   PetDatabaseSearchableByName.h
- * Author: mbmap
- *
- * Created on February 19, 2018, 11:22 PM
- */
-
 #ifndef PETDATABASESEARCHABLEBYNAME_H
 #define PETDATABASESEARCHABLEBYNAME_H
 
+#include "Pet.h"
+#include <vector>
+#include <iostream>
+using namespace::std;
+#include"PetDatabaseSearchable"
 
+class PetDatabaseSearchableByName : public PetDatabaseSearchable{
+protected:
+    vector<Pet*> pet_vector;
+    string query;
+public:
+    virtual unsigned int getSize() const{
+        return pet_vector.size();
+    }
+    virtual int compareAt(int i) const{
+        if (query == (*pet_vector[i]).name){
+            return 1;
+        }
+        if (query < (*pet_vector[i]).name){
+            return 2;
+        }
+        return 3;
+    }
+    
+    void setQuery(int q){
+        query = q;
+    }
+};
 
 #endif /* PETDATABASESEARCHABLEBYNAME_H */
 
