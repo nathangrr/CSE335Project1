@@ -64,4 +64,3 @@ public:
 };
 
 #endif /* CAT_H */
-

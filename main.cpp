@@ -5,16 +5,16 @@
 #include "Fish.h"
 #include "Bird.h"
 #include "PetDatabaseSortableByName.h"
-#include "PetDatabaseSortableByWeight.h"
-#include "PetDatabaseSortableByPrice.h"
-#include "PetDatabaseSortableByType.h"
+//#include "PetDatabaseSortableByWeight.h"
+//#include "PetDatabaseSortableByPrice.h"
+//#include "PetDatabaseSortableByType.h"
 #include "BubbleSortDecreasing.h"
 #include "BubbleSortIncreasing.h"
-#include "PetDatabaseSearchableByName.h"
-#include "PetDatabaseSearchableByPrice.h"
-#include "PetDatabaseSearchableByType.h"
-#include "PetDatabaseSearchableByWeight.h"
-#include "BinarySearch.h"
+//#include "PetDatabaseSearchableByName.h"
+//#include "PetDatabaseSearchableByPrice.h"
+//#include "PetDatabaseSearchableByType.h"
+//#include "PetDatabaseSearchableByWeight.h"
+//#include "BinarySearch.h"
 using namespace std;
 
 /*
@@ -74,6 +74,7 @@ int main(int argc, char** argv) {
     cout<<"*********************** After Sorting By Name Descending"<<endl;
     petDatabaseSortableByName.DisplayRecords();
     
+    /*
     bsd.sort(&petDatabaseSortableByName);
     cout<<"*********************** After Sorting By Name Ascending"<<endl;
     petDatabaseSortableByName.DisplayRecords();
@@ -132,6 +133,6 @@ int main(int argc, char** argv) {
     if (s.search(&SName) == -1) cout << "Charlie not found." << endl;
     else cout << " Search failed." << endl;
     
-    
+    */
     return 0;
 }

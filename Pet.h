@@ -6,7 +6,7 @@
 using namespace::std;
 
 class Pet{
-protected:
+public:
     string name;
     string type;
     unsigned int weight;
