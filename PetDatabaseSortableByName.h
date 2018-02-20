@@ -1,10 +1,9 @@
+#ifndef PETDATABASESORTABLEBYNAME_H
+#define PETDATABASESORTABLEBYNAME_H
+
 #include "PetDataBaseSortable.h"
 #include "Pet.h"
 
-
-
-#ifndef PETDATABASESORTABLEBYNAME_H
-#define PETDATABASESORTABLEBYNAME_H
 
 class PetDatabaseSortableByName : public PetDatabaseSortable{
 public:
@@ -15,9 +14,9 @@ public:
   
     virtual bool smaller(int i,int j){
         if(petVector[i]->name<petVector[j]->name){
-            return true;
-        }else{
             return false;
+        }else{
+            return true;
         }
     }
     

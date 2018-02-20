@@ -9,7 +9,7 @@ class Pet{
 public:
     string name;
     string type;
-    unsigned int weight;
+    double weight;
     double price;
 public:
     // Default Constructor
