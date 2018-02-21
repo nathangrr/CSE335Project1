@@ -11,6 +11,10 @@ class PetDatabaseSearchable{
 public:
     virtual unsigned int getSize() const = 0;
     virtual int compareAt(int) const = 0;
+    
+    Pet getPet(Pet p) const{
+        return p;
+    }
 };
 
 

@@ -5,10 +5,11 @@
 #include<iostream>
 using namespace std;
 #include "PetDatabaseSearchable.h"
+#include"Pet.h"
 
 class BinarySearch{
 public:
-    int search(PetDatabaseSearchable* pds){
+    Pet search(PetDatabaseSearchable* pds){
         int left = 0;
         int right = (*pds).getSize() - 1;
         while (left <= right){
