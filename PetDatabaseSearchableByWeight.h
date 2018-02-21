@@ -9,9 +9,12 @@ using namespace::std;
 
 class PetDatabaseSearchableByWeight : public PetDatabaseSearchable{
 protected:
-    vector<Pet*> pet_vector;
     double query;
 public:
+    PetDatabaseSearchableByWeight(vector<Pet*>& v){
+        petVector=v;
+    }
+    
     virtual unsigned int getSize() const{
         return pet_vector.size();
     }
