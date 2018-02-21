@@ -104,7 +104,7 @@ int main(int argc, char** argv) {
     cout<<"*********************** After Sorting By Weight Ascending"<<endl;
     bsd.sort(&petDatabaseSortableByWeight);
     petDatabaseSortableByWeight.DisplayRecords();
-    /*
+    
     BinarySearch s;
     
     cout<<"*********************** Searching for Name Casper3 ..."<<endl;
@@ -132,6 +132,6 @@ int main(int argc, char** argv) {
     if (s.search(&SName) == -1) cout << "Charlie not found." << endl;
     else cout << " Search failed." << endl;
     
-    */
+    
     return 0;
 }

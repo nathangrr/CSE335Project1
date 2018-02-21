@@ -8,9 +8,9 @@ using std::endl;
 #define PETDATABASESORTABLE_H
 
 class PetDatabaseSortable{
-protected:
-    vector<Pet*> petVector;
 public:
+    vector<Pet*> petVector;
+    
     unsigned int getSize(){
         return petVector.size();
     };

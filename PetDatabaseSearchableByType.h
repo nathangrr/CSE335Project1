@@ -5,14 +5,15 @@
 #include <vector>
 #include <iostream>
 using namespace::std;
-#include"PetdatabaseSearchable.h"
+#include "PetdatabaseSearchable.h"
+#include "PetDatabaseSortableByType.h"
 
 class PetDatabaseSearchableByType : public PetDatabaseSearchable{
 protected:
     string query;
 public:
-    PetDatabaseSearchableByType(vector<Pet*>& v){
-        petVector=v;
+    PetDatabaseSearchableByType(PetDatabaseSortableByType* v){
+        pet_vector=v->petVector;
     }
     
     virtual unsigned int getSize() const{
@@ -28,7 +29,7 @@ public:
         return 3;
     }
     
-    void setQuery(int q){
+    void setQuery(string q){
         query = q;
     }
 };

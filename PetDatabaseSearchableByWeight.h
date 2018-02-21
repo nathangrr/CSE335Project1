@@ -6,13 +6,14 @@
 #include <iostream>
 using namespace::std;
 #include "PetDatabaseSearchable.h"
+#include "PetDatabaseSortableByWeight.h"
 
 class PetDatabaseSearchableByWeight : public PetDatabaseSearchable{
 protected:
     double query;
 public:
-    PetDatabaseSearchableByWeight(vector<Pet*>& v){
-        petVector=v;
+    PetDatabaseSearchableByWeight(PetDatabaseSortableByWeight* v){
+        pet_vector=v->petVector;
     }
     
     virtual unsigned int getSize() const{
@@ -28,7 +29,7 @@ public:
         return 3;
     }
     
-    void setQuery(int q){
+    void setQuery(double q){
         query = q;
     }
 };
