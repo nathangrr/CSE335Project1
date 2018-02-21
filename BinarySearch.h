@@ -9,7 +9,7 @@ using namespace std;
 
 class BinarySearch{
 public:
-    Pet search(PetDatabaseSearchable* pds){
+    int search(PetDatabaseSearchable* pds){
         int left = 0;
         int right = (*pds).getSize() - 1;
         while (left <= right){
