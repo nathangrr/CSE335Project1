@@ -1,7 +1,7 @@
 #ifndef PETDATABASESORTABLEBYWEIGHT_H
 #define PETDATABASESORTABLEBYWEIGHT_H
 
-#include "PetDataBaseSortable.h"
+#include "PetDatabaseSortable.h"
 #include "Pet.h"
 
 

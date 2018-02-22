@@ -1,7 +1,7 @@
 #ifndef PETDATABASESORTABLEBYNAME_H
 #define PETDATABASESORTABLEBYNAME_H
 
-#include "PetDataBaseSortable.h"
+#include "PetDatabaseSortable.h"
 #include "Pet.h"
 
 
