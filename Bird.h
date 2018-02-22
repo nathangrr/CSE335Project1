@@ -4,6 +4,8 @@
 
 #include "Pet.h"
 #include<iostream>
+#include<iomanip>
+using std::setw;
 using namespace::std;
 
 class Bird : public Pet{
@@ -48,11 +50,11 @@ public:
     
     // Print
     virtual void print(){
-        cout << "Name:   " <<  name << " ";
-        cout << "Type:   " << type << " ";
-        cout << "Weight:   "<< weight << " ";
-        cout << "Price:   " << price << " ";
-        cout << "Nocturnal:   " << boolalpha << nocturnal << endl;
+        cout << "Name:" << setw(10) << name << setw(10) <<
+                "Type:" << setw(10) << type << setw(10) <<
+                "Weight:" << setw(4) << weight << setw(10) <<
+                "Price:" << setw(10) << left << price << setw(10) <<
+                "Nocturnal:" << boolalpha << setw(12) << nocturnal << endl;
      }
     
     void SetNocturnal(bool n){

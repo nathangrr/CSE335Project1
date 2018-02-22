@@ -4,6 +4,7 @@
 
 #include "Pet.h"
 #include<iostream>
+#include<iomanip>
 using namespace::std;
 
 class Fish : public Pet{
@@ -48,11 +49,11 @@ public:
     
     // Print
     virtual void print(){
-        cout << "Name:   " <<  name << " ";
-        cout << "Type:   " << type << " ";
-        cout << "Weight:   "<< weight << " ";
-        cout << "Price:   " << price << " ";
-        cout << "WaterType:   " << WaterType << endl;
+        cout << "Name:" << setw(10) << name << setw(10) <<
+                "Type:" << setw(10) << type << setw(10) <<
+                "Weight:" << setw(4) << weight << setw(10) <<
+                "Price:" << setw(10) << left << price << setw(10) <<
+                "WaterType:" << setw(12) << WaterType << endl;
     }
     
     void SetEnvironment(string w){

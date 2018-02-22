@@ -13,7 +13,7 @@ public:
     }
   
     virtual bool smaller(int i,int j){
-        if(petVector[i]->weight<petVector[j]->weight){
+        if(petVector[i]->weight>petVector[j]->weight){
             return false;
         }else{
             return true;

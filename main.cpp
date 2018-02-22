@@ -1,24 +1,32 @@
+/*
+ * 
+ */
+
 #include "Pet.h"
 #include "Cat.h"
 #include "Dog.h"
 #include "Fish.h"
 #include "Bird.h"
 #include "PetDatabaseSortableByName.h"
-#include "PetDatabaseSortableByWeight.h"
-#include "PetDatabaseSortableByPrice.h"
 #include "PetDatabaseSortableByType.h"
-#include "BubbleSortDecreasing.h"
-#include "BubbleSortIncreasing.h"
+#include "PetDatabaseSortableByPrice.h"
+#include "PetDatabaseSortableByWeight.h"
 #include "PetDatabaseSearchableByName.h"
-#include "PetDatabaseSearchableByPrice.h"
 #include "PetDatabaseSearchableByType.h"
+#include "PetDatabaseSearchableByPrice.h"
 #include "PetDatabaseSearchableByWeight.h"
 #include "BinarySearch.h"
-using namespace std;
+#include "BubbleSortIncreasing.h"
+#include "BubbleSortDecreasing.h"
+#include <iostream>
+#include <vector>
 
-int main(int argc, char** argv) {
-    
-    //Test sorting pets
+using std::cout;
+using std::endl;
+using std::vector;
+
+int main(int argc, char** argv)
+{
     Bird Archie1("Archie1","Parrot",99.99,5, true); 
     Bird Archie2("Archie2","Owl", 70, 6 , false); 
     Bird Archie3("Archie3","Penguin", 49.99,9 , true);  
@@ -63,42 +71,45 @@ int main(int argc, char** argv) {
     
     BubbleSortIncreasing bs;
     BubbleSortDecreasing bsd;
+    
     cout<<"*********************** Before Sorting"<<endl;
     PetDatabaseSortableByName petDatabaseSortableByName(allPets);
     petDatabaseSortableByName.DisplayRecords();
-    bs.sort(&petDatabaseSortableByName);
+    
+    
     cout<<"*********************** After Sorting By Name Descending"<<endl;
+    bsd.sort(&petDatabaseSortableByName);
     petDatabaseSortableByName.DisplayRecords();
     
-    bsd.sort(&petDatabaseSortableByName);
     cout<<"*********************** After Sorting By Name Ascending"<<endl;
+    bs.sort(&petDatabaseSortableByName);
     petDatabaseSortableByName.DisplayRecords();
     
     PetDatabaseSortableByType petDatabaseSortableByType(allPets);
-    bs.sort(&petDatabaseSortableByType);
     cout<<"*********************** After Sorting By Type Descending"<<endl;
-    petDatabaseSortableByType.DisplayRecords();
-    
     bsd.sort(&petDatabaseSortableByType);
-    cout<<"*********************** After Sorting By Type Ascending"<<endl;
     petDatabaseSortableByType.DisplayRecords();
     
-    cout<<"*********************** After Sorting By Price Descending"<<endl;
-    PetDatabaseSortableByPrice petDatabaseSortableByPrice(allPets);
-    bs.sort(&petDatabaseSortableByPrice);
-    petDatabaseSortableByPrice.DisplayRecords();
+    cout<<"*********************** After Sorting By Type Ascending"<<endl;
+    bs.sort(&petDatabaseSortableByType);
+    petDatabaseSortableByType.DisplayRecords();
     
-    cout<<"*********************** After Sorting By Price Ascending"<<endl;
+    PetDatabaseSortableByPrice petDatabaseSortableByPrice(allPets);
+    cout<<"*********************** After Sorting By Price Descending"<<endl;
     bsd.sort(&petDatabaseSortableByPrice);
     petDatabaseSortableByPrice.DisplayRecords();
     
-    cout<<"*********************** After Sorting By Weight Descending"<<endl;
+    cout<<"*********************** After Sorting By Price Ascending"<<endl;
+    bs.sort(&petDatabaseSortableByPrice);
+    petDatabaseSortableByPrice.DisplayRecords();
+    
     PetDatabaseSortableByWeight petDatabaseSortableByWeight(allPets);
-    bs.sort(&petDatabaseSortableByWeight);
+    cout<<"*********************** After Sorting By Weight Descending"<<endl;
+    bsd.sort(&petDatabaseSortableByWeight);
     petDatabaseSortableByWeight.DisplayRecords();
     
     cout<<"*********************** After Sorting By Weight Ascending"<<endl;
-    bsd.sort(&petDatabaseSortableByWeight);
+    bs.sort(&petDatabaseSortableByWeight);
     petDatabaseSortableByWeight.DisplayRecords();
     
     BinarySearch s;
@@ -127,7 +138,6 @@ int main(int argc, char** argv) {
     SName.setQuery("Charlie");
     if (s.search(&SName) == -1) cout << "Charlie not found." << endl;
     else cout << " Search failed." << endl;
-    
     
     return 0;
 }
