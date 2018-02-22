@@ -1,4 +1,3 @@
-
 #include "Pet.h"
 #include "Cat.h"
 #include "Dog.h"
@@ -17,9 +16,6 @@
 #include "BinarySearch.h"
 using namespace std;
 
-/*
- * 
- */
 int main(int argc, char** argv) {
     
     //Test sorting pets

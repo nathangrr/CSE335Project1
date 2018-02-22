@@ -11,7 +11,9 @@ class PetDatabaseSearchable{
 protected:
     vector<Pet*> pet_vector;
 public:
-    virtual unsigned int getSize() const = 0;
+    virtual unsigned int getSize() const{
+        return pet_vector.size();
+    }
     virtual int compareAt(int) const = 0;
     
     Pet* getPet(int i) const{

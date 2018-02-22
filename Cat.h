@@ -12,7 +12,7 @@ private:
 
 public:
     // Constructor
-    Cat(string n,string t,double w, double p, bool f){
+    Cat(string n,string t,double p, double w, bool f){
         name = n;
         type = t;
         weight = w;

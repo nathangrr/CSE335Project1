@@ -12,7 +12,7 @@ private:
 
 public:
     // Constructor
-    Bird(string n,string t,double w, double p, bool no){
+    Bird(string n,string t,double p, double w, bool no){
         name = n;
         type = t;
         weight = w;

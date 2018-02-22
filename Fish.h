@@ -12,7 +12,7 @@ private:
 
 public:
     // Constructor
-    Fish(string n,string t,double w, double p, string wa){
+    Fish(string n,string t,double p, double w, string wa){
         name = n;
         type = t;
         weight = w;

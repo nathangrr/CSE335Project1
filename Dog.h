@@ -12,7 +12,7 @@ private:
 
 public:
     // Constructor
-    Dog(string n,string t,double w, double p, string c){
+    Dog(string n,string t,double p, double w, string c){
         name = n;
         type = t;
         weight = w;

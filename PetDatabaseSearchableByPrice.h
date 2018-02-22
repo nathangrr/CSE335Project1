@@ -16,9 +16,6 @@ public:
         pet_vector=v->petVector;
     }
     
-    virtual unsigned int getSize() const{
-        return pet_vector.size();
-    }
     virtual int compareAt(int i) const{
         if (query == (*pet_vector[i]).price){
             return 1;
